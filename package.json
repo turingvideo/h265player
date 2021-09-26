@@ -1,8 +1,9 @@
 {
-  "name": "goldvideo-player",
+  "name": "h265player",
   "version": "1.0.2",
-  "description": "goldplay-h265player",
-  "main": "dist/goldplay-h265-sdk.js",
+  "description": "h265player",
+  "main": "dist/h265-sdk.js",
+  "private": true,
   "directories": {
     "doc": "doc",
     "test": "test"
@@ -16,12 +17,9 @@
     "merge": "",
     "jest": "jest"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/goldvideo/h265player"
+    "url": "git+https://github.com/turingvideo/h265player.git"
   },
   "dependencies": {
     "babel-runtime": "^6.26.0",
@@ -72,15 +70,13 @@
     "webworkify-webpack": "^2.1.5"
   },
   "files": [
-    "dist/goldplay-h265-sdk.js",
-    "dist/goldplay-h265.css"
+    "dist/h265-sdk.js",
+    "dist/h265.css"
   ],
   "keywords": [
     "h265",
     "video",
     "player",
     "webassmebly"
-  ],
-  "author": "goldvideo",
-  "license": "ISC"
+  ]
 }
