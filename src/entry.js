@@ -7,4 +7,4 @@
  * @author Jarry
  */
 
-module.exports = require('./GoldPlay.js').default
+module.exports = require("./H265Player.js").default;

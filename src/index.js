@@ -7,7 +7,7 @@
  * @author Jarry
  */
 
-import Player from './GoldPlay'
-import './themes/player.css'
+import Player from "./H265Player";
+import "./themes/player.css";
 
-export default Player
+export default Player;
