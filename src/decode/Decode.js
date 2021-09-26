@@ -26,15 +26,10 @@ class Decode {
         return libPath + wasm;
       }
     }
-    // self.importScripts(libPath + 'TAppDecoderStatic.js')
     self.importScripts(libPath + 'libffmpeg.js')
     self.Module.onRuntimeInitialized = function() {
       console.log('wasm loaded')
-      if (!Module._web_decoder_open) {
-        self.decode.decodeTool = new FFmpegDecode(self.decode, this.event)
-      } else {
-        self.decode.decodeTool = new PCWDecode(self.decode, this.event)
-      }
+      self.decode.decodeTool = new FFmpegDecode(self.decode, this.event)
       self.decode.openDecode()
       self.decode.onWasmLoaded()
     }
