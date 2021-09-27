@@ -239,6 +239,9 @@ class Player extends BaseClass {
   }
   bindEvent() {
     this.events.on(Events.PlayerOnPlay, () => {
+      if (this.options.onPlay) {
+        this.options.onPlay();
+      }
       this.play();
     });
     this.events.on(Events.PlayerOnPause, () => {
