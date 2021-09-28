@@ -238,7 +238,18 @@ class Player extends BaseClass {
     this.bindEvent();
   }
   bindEvent() {
+    this.events.on(
+      Events.LoaderNextPlayListLoaded,
+      (index, length, duration) => {
+        this.duration += duration;
+        this.streamController.setBaseInfo({
+          tsNumber: index + length - 1,
+          duration: this.duration,
+        });
+      }
+    );
     this.events.on(Events.PlayerOnPlay, () => {
+      console.log("player onPlay");
       if (this.options.onPlay) {
         this.options.onPlay();
       }
